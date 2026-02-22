@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ephemeral Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="composer" aria-label="Create note">
+        <textarea id="noteInput" maxlength="500" aria-label="Write note"></textarea>
+        <button id="saveBtn" class="icon-btn" aria-label="Save note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </button>
+      </section>
+
+      <section id="notes" class="notes" aria-live="polite"></section>
+    </main>
+
+    <template id="noteTemplate">
+      <article class="note">
+        <p class="note-text"></p>
+        <button class="icon-btn delete-btn" aria-label="Delete note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M9 7V5h6v2M8 7v12m8-12v12M6 7l1 13h10l1-13" />
+          </svg>
+        </button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
