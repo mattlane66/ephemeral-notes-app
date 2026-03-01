@@ -33,6 +33,26 @@ body {
   gap: 18px;
 }
 
+.section-block {
+  display: grid;
+  gap: 10px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #646a84;
+}
+
 .composer {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -126,6 +146,36 @@ body {
   color: var(--danger);
 }
 
+.note-recently-deleted {
+  opacity: 0.86;
+  background: #fff9f8;
+}
+
+.danger-link-btn {
+  border: 0;
+  padding: 6px 0;
+  background: transparent;
+  color: var(--danger);
+  font: 600 13px/1 "Avenir Next", "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.danger-link-btn:hover {
+  text-decoration: underline;
+}
+
+.danger-link-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.permanent-delete-btn {
+  justify-self: end;
+  background: #ffe4e4;
+  color: #b72020;
+}
+
 @keyframes pop {
   from {
     opacity: 0;
@@ -148,5 +198,9 @@ body {
 
   .icon-btn {
     width: 100%;
+  }
+
+  .danger-link-btn {
+    padding: 10px 0;
   }
 }

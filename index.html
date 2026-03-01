@@ -17,13 +17,35 @@
         </button>
       </section>
 
-      <section id="notes" class="notes" aria-live="polite"></section>
+      <section class="section-block" aria-label="Active notes">
+        <h2 class="section-title">Active Notes</h2>
+        <section id="notes" class="notes" aria-live="polite"></section>
+      </section>
+
+      <section class="section-block" aria-label="Recently deleted notes">
+        <div class="section-head">
+          <h2 class="section-title">Recently Deleted</h2>
+          <button id="deleteAllBtn" class="danger-link-btn" type="button">Delete All</button>
+        </div>
+        <section id="recentlyDeleted" class="notes recently-deleted-notes" aria-live="polite"></section>
+      </section>
     </main>
 
     <template id="noteTemplate">
       <article class="note">
         <p class="note-text"></p>
         <button class="icon-btn delete-btn" aria-label="Delete note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M9 7V5h6v2M8 7v12m8-12v12M6 7l1 13h10l1-13" />
+          </svg>
+        </button>
+      </article>
+    </template>
+
+    <template id="recentlyDeletedTemplate">
+      <article class="note note-recently-deleted">
+        <p class="note-text"></p>
+        <button class="icon-btn permanent-delete-btn" aria-label="Permanently delete note">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h16M9 7V5h6v2M8 7v12m8-12v12M6 7l1 13h10l1-13" />
           </svg>
