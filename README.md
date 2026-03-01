@@ -1,4 +1,5 @@
 # Ephemeral Notes
+https://unrivaled-choux-3ba6a2.netlify.app
 
 Simple icon-only notes app with a Recently Deleted area.
 
