@@ -22,3 +22,16 @@ Simple icon-only notes app with a Recently Deleted area.
 - Use `Delete All` to permanently clear all recently deleted notes.
 
 The active list excludes notes in Recently Deleted. All notes are stored in browser local storage and lifecycle cleanup runs every minute.
+
+## Project structure
+
+This project is organized by vertical slice:
+
+- `src/slices/composer/`: create-note UI wiring
+- `src/slices/active-notes/`: active-note rendering and delete actions
+- `src/slices/recently-deleted/`: recently-deleted rendering and permanent delete actions
+- `src/domain/`: note state normalization and lifecycle rules
+- `src/storage/`: local-storage persistence
+- `src/shared/`: constants and shared time/id helpers
+
+See `docs/vertical-slices.md` for a thread-per-slice workflow.
